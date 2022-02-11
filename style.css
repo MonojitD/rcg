@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Playfair+Display:wght@600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(140.54deg, #608d00 0%, #d30000 72.37%),
+    linear-gradient(58.72deg, #0029ff 0%, #8fff00 100%),
+    radial-gradient(100% 164.72% at 100% 100%, #6100ff 0%, #00ff57 100%),
+    radial-gradient(100% 148.07% at 0% 0%, #fff500 0%, #51d500 100%);
+  background-blend-mode: color-dodge, overlay, difference, normal;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.5s ease;
+}
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color:rgba(255, 255, 255, 0.2);
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.376);
+  backdrop-filter: blur(1px);
+  width: calc(100% - 45vw);
+  height: 6%;
+
+}
+.text h3 {
+  text-align: center;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 3vw;
+  word-spacing: 2vw;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background-size: 300%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: animat 15s linear infinite;
+}
+
+@keyframes animat {
+  0%{background-position:0% 82%}
+  50%{background-position:100% 19%}
+  100%{background-position:0% 82%}
+}
+
+#main {
+  height: 87vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#demo2,
+.textquote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+.textquote {
+  font-size: 1.5vw;
+  font-weight: 700;
+  color: rgb(238, 238, 238);
+  font-family: sans-serif;
+  letter-spacing: 0.5vh;
+  /* border: 3px solid white; */
+  background: rgba(255, 255, 255, 0.287);
+  width: 30vw;
+  height: 6vh;
+  text-align: center;
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.376);
+}
+#btn1,
+#btn2,
+#btn3 {
+  width: 15vw;
+  height: 6vh;
+  border: 3px solid white;
+  background: rgba(255, 255, 255, 0.287);
+  transition: 0.2s ease-in;
+  font-size: 1.1vw;
+  font-weight: 700;
+  color: rgb(238, 238, 238);
+  font-family: sans-serif;
+  letter-spacing: 0.3vh;
+  box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.376);
+  cursor: pointer;
+}
+#btn1:hover,
+#btn2:hover,
+#btn3:hover {
+  background: rgb(244, 244, 244);
+  color: rgba(0, 0, 0, 0.514);
+}
+#btn3 {
+  display: none;
+  width: 6vh;
+  height: 6vh;
+  font-size: 1vh;
+  margin-top: 5%;
+  margin-left: 2%;
+  border: none;
+}
+.code {
+  display: flex;
+  align-items: center;
+}
+.footer {
+  text-align: center;
+  color: rgb(214, 214, 214);
+  font-family: sans-serif;
+  font-size: 0.8vw;
+  letter-spacing: 1px;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5vw;
+  font-weight: 500;
+  font-family: 'Bonheur Royale', cursive;
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background-size: 300%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: animat 10s linear infinite;
+}
+
+/* media query */
+@media only screen and (min-width: 350px) and (max-width: 425px) {
+  .texitem {
+    font-size: 7vw;
+  }
+  .textquote {
+    font-size: 3vw;
+    letter-spacing: 0.25vh;
+    width: 45vw;
+    height: 6vh;
+  }
+  #btn1,
+  #btn2 {
+    margin-top: 3vh;
+    width: 23vw;
+    height: 4vh;
+    border: 2px solid white;
+    transition: 500 ease-in;
+    font-size: 2.6vw;
+    font-weight: 500;
+    color: rgb(238, 238, 238);
+    letter-spacing: 0.08vh;
+  }
+  .footer {
+    letter-spacing: 1px;
+  }
+}
